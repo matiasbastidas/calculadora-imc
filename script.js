@@ -1,7 +1,8 @@
 const calcularIMC = () => {
     peso = document.getElementById('peso').value
-    // calcular la altura cm a m
-    altura = (document.getElementById('altura').value) / 100
+    
+    const metrosCentimetros = 100
+    altura = (document.getElementById('altura').value) / metrosCentimetros
 
     imc = peso / (Math.pow(altura, 2))
 
@@ -17,8 +18,6 @@ const calcularIMC = () => {
     } else {
         document.getElementById('mensaje').innerHTML = 'Estas con obesidad'
     }
-
-    console.log(peso, altura, imc)
 }
 
 const recargar = () => {
